@@ -1,0 +1,94 @@
+src/task2_cleaning.py
+return_code=0
+STDOUT:
+CLEANING RESTAURANT RECORDS
+-----------------------------------
+Valid: Swiggy Bites
+Valid: Zomato Kitchen
+Valid: Pizza Palace
+Valid: Burger Hub
+Skipped: empty entry
+Skipped: numeric-only entry -> 12345
+Valid: Spice Route
+Valid: Tasty Meals
+Skipped: empty entry
+Valid: Fresh Bowl
+
+AMOUNT RUNNING TOTAL
+-----------------------------------
+  150.00 -> running total:   150.00
+  200.50 -> running total:   350.50
+  325.75 -> running total:   676.25
+  410.00 -> running total:  1086.25
+   99.99 -> running total:  1186.24
+  275.25 -> running total:  1461.49
+  500.00 -> running total:  1961.49
+  125.50 -> running total:  2086.99
+   80.00 -> running total:  2166.99
+  220.00 -> running total:  2386.99
+
+SUMMARY
+-----------------------------------
+Total valid records : 7
+Total skipped       : 3
+Running total amount: Rs 2386.99
+
+STDERR:
+Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+
+src/task3_fee_calculator.py
+return_code=0
+STDOUT:
+ALL RECORDS WITH COMMISSION
+--------------------------------------------------
+ID=1 | Swiggy Bites    | Amount=Rs 150.00 | Fee=Rs 15.00
+ID=2 | Pizza Palace    | Amount=Rs 250.00 | Fee=Rs 37.50
+ID=3 | Burger Hub      | Amount=Rs 375.00 | Fee=Rs 56.25
+ID=4 | Spice Route     | Amount=Rs 500.00 | Fee=Rs 75.00
+ID=5 | Tasty Meals     | Amount=Rs 650.00 | Fee=Rs 130.00
+ID=6 | Fresh Bowl      | Amount=Rs 900.00 | Fee=Rs 180.00
+
+AUDIT RECORDS: commission > Rs 80.00
+--------------------------------------------------
+ID=5 | Tasty Meals | Fee=Rs 130.00
+ID=6 | Fresh Bowl | Fee=Rs 180.00
+
+Total fee: Rs 493.75
+
+STDERR:
+Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+
+src/task4_record_manager.py
+return_code=0
+STDOUT:
+Saved 2 records to data/processed/records.json
+Operation complete
+Loaded 2 records from data/processed/records.json
+Operation complete
+
+RECONSTRUCTED OBJECTS
+Order(order_id='FD001', restaurant_name='Swiggy Bites', amount=250.0, delivery_time_minutes=30, is_delivered=True)
+Order(order_id='FD002', restaurant_name='Pizza Palace', amount=520.5, delivery_time_minutes=42, is_delivered=False)
+
+STDERR:
+Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
