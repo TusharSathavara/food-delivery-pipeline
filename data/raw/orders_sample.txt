@@ -1,0 +1,3 @@
+order_id,restaurant,amount
+FD001,Swiggy Bites,250
+FD002,Pizza Palace,520
