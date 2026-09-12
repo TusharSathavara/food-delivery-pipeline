@@ -1,0 +1,16 @@
+[
+  {
+    "order_id": "FD001",
+    "restaurant_name": "Swiggy Bites",
+    "amount": 250.0,
+    "delivery_time_minutes": 30,
+    "is_delivered": true
+  },
+  {
+    "order_id": "FD002",
+    "restaurant_name": "Pizza Palace",
+    "amount": 520.5,
+    "delivery_time_minutes": 42,
+    "is_delivered": false
+  }
+]
