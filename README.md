@@ -45,3 +45,7 @@ and option 4 saves/loads JSON records.
 
 Work should be developed on feature branches and merged into `main` only after review.
 The `docs/git_commands.txt` file contains the command sequence used for the assessment.
+
+## Verification
+
+The project was tested locally and the main features were verified.
